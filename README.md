@@ -1,30 +1,36 @@
 # Probability-Density-Functions-Assignment-2-UCS654
 This repository contains the solution for Assignment-2, which focuses on learning an unknown probability density function of a transformed random variable using a Generative Adversarial Network (GAN).
 
-
 ## Dataset Description
 - Feature used: **NO₂ concentration (`no2`)**
 - Source: India Air Quality Dataset (Kaggle)
 - Non-numeric and missing values are removed before processing.
 
+---
 
 ## Step-1: Transformation of the Random Variable
 
 Each value of the original variable \( x \) (NO₂ concentration) is transformed using the function:
 
-\[z = x + a_r \sin(b_r x)\]
+\[
+z = x + a_r \sin(b_r x)
+\]
 
 ### Roll Number
 r=102317097
 
+
 ### Computed Parameters
 Using the assignment definitions:
-\[a_r = 0.5 \times (r \bmod 7)\]
-\[b_r = 0.3 \times (r \bmod 5 + 1)\]
+\[
+a_r = 0.5 \times (r \bmod 7)
+\]
+\[
+b_r = 0.3 \times (r \bmod 5 + 1)
+\]
 
-The computed values are:
-a=0.5
-b=0.8999999999999999
+a_r = 0.5
+b_r = 0.9
 
 
 These parameters introduce a nonlinear perturbation to the original data, resulting in a transformed variable with an unknown probability distribution.
@@ -79,3 +85,5 @@ The smooth curve confirms stable GAN training and successful density learning wi
 ## Conclusion
 This assignment demonstrates the use of generative models for learning unknown probability density functions directly from data. The GAN-based approach effectively models the transformed NO₂ concentration values and enables PDF estimation without relying on predefined distributional assumptions.
 
+
+The computed values are:
